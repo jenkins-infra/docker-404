@@ -3,6 +3,7 @@ metadataTest:
   entrypoint: ["/docker-entrypoint.sh"]
   cmd: ["nginx", "-g", "daemon off;"]
   exposedPorts: ["8080"]
+  volumes: ["/var/log/nginx", "/var/run/nginx", "/var/cache/nginx"]
 fileExistenceTests:
   - name: 'nginx'
     path: '/usr/sbin/nginx'
