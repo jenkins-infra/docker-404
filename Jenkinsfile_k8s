@@ -1,1 +1,3 @@
+@Library('pipeline-library@pull/333/head') _
+
 parallelDockerUpdatecli([imageName: '404', rebuildImageOnPeriodicJob: false, containerMemory: '1G'])
