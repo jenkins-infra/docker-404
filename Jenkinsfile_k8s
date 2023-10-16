@@ -1,1 +1,1 @@
-parallelDockerUpdatecli([imageName: '404', rebuildImageOnPeriodicJob: false, containerMemory: '1G'])
+parallelDockerUpdatecli([imageName: '404', rebuildImageOnPeriodicJob: false, , updatecliConfig: [containerMemory: '1G'], buildDockerConfig : [targetplatforms: 'linux/amd64,linux/arm64']])
