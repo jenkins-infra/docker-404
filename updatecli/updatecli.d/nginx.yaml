@@ -46,6 +46,7 @@ actions:
   default:
     kind: github/pullrequest
     scmid: default
+    title: Bump Nginx version to {{ source "latestRelease" }}
     spec:
       labels:
         - dependencies
