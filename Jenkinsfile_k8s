@@ -1,5 +1,3 @@
-@Library('pipeline-library@pull/924/head') _
-
 buildDockerAndPublishImage('404', [
     automaticSemanticVersioning: true,
     targetplatforms: 'linux/amd64,linux/arm64',
