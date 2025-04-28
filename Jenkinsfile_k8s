@@ -1,4 +1,3 @@
 buildDockerAndPublishImage('404', [
-    automaticSemanticVersioning: true,
     targetplatforms: 'linux/amd64,linux/arm64',
     ])
