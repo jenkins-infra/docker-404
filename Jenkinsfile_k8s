@@ -1,24 +1,3 @@
-@Library('pipeline-library@pull/938/head') _
-
-pipeline {
-    agent {
-        label 'jnlp-linux-arm64'
-    }
-    stages {
-        stage('Build and Publish Docker Image') {
-            steps {
-                script {
-                    buildDockerAndPublishImage('404', [ /* ... */ ])
-                }
-            }
-        }
-    }
-    post {
-        always {
-            script {
-                echo '[Docker-404 Post-Build] Attempting to publish build status report.'
-                publishBuildStatusReport()
-            }
-        }
-    }
-}
+buildDockerAndPublishImage('404', [
+    targetplatforms: 'linux/amd64,linux/arm64',
+    ]) // test
