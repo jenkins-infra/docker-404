@@ -1,3 +1,5 @@
+@Library('pipeline-library@pull/940/head') _
+
 buildDockerAndPublishImage('404', [
     targetplatforms: 'linux/amd64,linux/arm64',
     ])
