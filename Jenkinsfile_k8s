@@ -2,5 +2,6 @@
 
 buildDockerAndPublishImage('404', [
     targetplatforms: 'linux/amd64,linux/arm64',
-    cacheTo: 'type=inline' // Added cacheTo parameter
+    registryNamespace: 'jayfranco', // Use your Docker Hub username as the namespace
+    cacheTo: 'type=registry,mode=max,ref=jayfranco/404:latest-cache'
 ])
