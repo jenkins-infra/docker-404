@@ -1,3 +1,6 @@
+@Library('pipeline-library@pull/944/head') _
+
 buildDockerAndPublishImage('404', [
     targetplatforms: 'linux/amd64,linux/arm64',
-    ])
+    cacheTo: 'type=registry,ref=jenkinsciinfra/404:latest-cache',
+])
