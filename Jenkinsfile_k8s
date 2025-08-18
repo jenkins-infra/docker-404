@@ -1,6 +1,9 @@
+@Library('pipeline-library@pull/955/head') _
+
 buildDockerAndPublishImage('404', [
+    publishToPrivateAzureRegistry: true,
     targetplatforms: 'linux/amd64,linux/arm64',
-    ]) // test
+]) // test
 
 node('jnlp-linux-arm64') {
     stage('[Post-Build] Status Report') {
