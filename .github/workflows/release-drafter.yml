@@ -15,7 +15,8 @@ jobs:
       - name: Wait for 15 seconds to ensure GraphQL consistency
         shell: bash
         run: sleep 15s
-      - uses: release-drafter/release-drafter@139054aeaa9adc52ab36ddf67437541f039b88e2 # v7.1.1
+      - name: Release Drafter
+        uses: release-drafter/release-drafter@139054aeaa9adc52ab36ddf67437541f039b88e2 # v7.1.1
         with:
           # This token is generated automatically by default in GitHub Actions: no need to create it manually
           token: ${{ secrets.GITHUB_TOKEN }}
