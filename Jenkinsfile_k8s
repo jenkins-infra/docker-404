@@ -1,11 +1,6 @@
+@Library('pipeline-library@pull/1003/head') _
+
 buildDockerAndPublishImage('404', [
     publishToPrivateAzureRegistry: true,
     targetplatforms: 'linux/amd64,linux/arm64',
 ]) // test
-
-node('jnlp-linux-arm64') {
-    stage('[Post-Build] Status Report') {
-        echo "[Docker-404] After main call. Current result: ${currentBuild.currentResult}, Branch Primary: ${env.BRANCH_IS_PRIMARY}"
-        publishBuildStatusReport()
-    }
-}
