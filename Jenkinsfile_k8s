@@ -1,3 +1,5 @@
+@Library('pipeline-library@pull/1005/head') _
+
 buildDockerAndPublishImage('404', [
     publishToPrivateAzureRegistry: true,
     targetplatforms: 'linux/amd64,linux/arm64',
